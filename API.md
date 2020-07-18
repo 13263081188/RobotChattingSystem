@@ -17,7 +17,7 @@
 **param**:	email,username,password<br>
 **return**:<br>	
 	{<br>
-	***'isOk':true*** (    若用户名存在则为false)<br>
+	***'isOk':true*** (注册成功则为true)<br>
 	***'errmsg':"未知错误"***<br>
 	}<br>
 注：该api只判断用户名是否唯一，邮箱在emailCheck时已判断<br>
