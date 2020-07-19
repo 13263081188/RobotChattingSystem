@@ -19,5 +19,6 @@ from robotchat import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('signUp/', views.SignUp),
-    path('emailCheck/', views.email_check)
+    path('emailCheck/', views.email_check),
+    path('signIn/', views.SignIn),
 ]

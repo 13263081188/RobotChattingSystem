@@ -35,3 +35,18 @@ def SignUp(request):
             user_info.objects.create(username=username, password=password, email=email)
         jsonData = json.dumps(resData)
         return HttpResponse(jsonData, content_type="application/json")
+
+def SignIn(request):
+    resData = {'isOk': False, 'errmsg': '未知错误'}
+    if request.method =='POST':
+        username = request.POST.get('name')
+        password = request.POST.get('psw')
+        # 对username去查在数据库中是否存在于username字段或者email字段
+        res1 = user_info.objects.filter(email=username, password=password)
+        res2 = user_info.objects.filter(username=username, password=password)
+        if res1 or res2:
+            resData['isOk'] = True
+        else:
+            resData['errmsg'] = '用户名或密码错误'
+        jsonData = json.dumps(resData)
+        return HttpResponse(jsonData, content_type="application/json")
