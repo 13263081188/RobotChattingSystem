@@ -21,3 +21,12 @@
 	***'errmsg':"未知错误"***<br>
 	}<br>
 注：该api只判断用户名是否唯一，邮箱在emailCheck时已判断<br>
+
+## 3.登录：
+**api**:	url+signIn<br>
+**param**:	name, psw<br>
+**return**:<br>
+	{<br>
+	**'isOk'**:true<br>
+	**'errmsg'**:'未知错误'/'密码错误'/'邮箱错误'/'用户名错误'  
+	}
