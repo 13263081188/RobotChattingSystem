@@ -1,0 +1,6 @@
+[client]
+database = user
+user=root
+password=qazwsx990303
+HOST = 127.0.0.1
+PORT = 3306
