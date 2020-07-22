@@ -1,5 +1,7 @@
 <h1> 本文件为RobotChattingSystem前后端交互所需API</h1>
 <h3>默认为post方法</h3>
+<h1> 本文件为RobotChattingSystem前后端交互所需API</h1>
+<h3>默认为post方法</h3>
 ## 1.邮箱验证：
 **api**:	url+emailCheck<br>
 **param**:email<br>
@@ -28,13 +30,13 @@
 **return**:<br>
 	{<br>
 	**'isOk'**:true<br>
-	**'errmsg'**:'未知错误'/'密码错误'/'邮箱错误'/'用户名错误'  
-	
+	**'errmsg'**:'未知错误'/'密码错误'/'邮箱错误'/'用户名错误'  <br>
+	**'user_id'**:''<br>
 	}
 
 ## 4.发帖：
 **api**:  url+toPost<br>
-**param**: content(评论的内容),label(吐槽的标签）<br>
+**param**: content(评论的内容),label(吐槽的标签）,isAnonymity<br>
 **return**:<br>
 {<br>
 **'isOk'**:true<br>
@@ -77,6 +79,11 @@
 **'isOk'**:true<br>
 **'errmsg'**:'未知错误'<br>
 }
+
+
+
+
+
 
 
 
