@@ -1,5 +1,5 @@
 <h1> 本文件为RobotChattingSystem前后端交互所需API</h1>
-
+<h3>默认为post方法</h3>
 ## 1.邮箱验证：
 **api**:	url+emailCheck<br>
 **param**:email<br>
@@ -30,3 +30,53 @@
 	**'isOk'**:true<br>
 	**'errmsg'**:'未知错误'/'密码错误'/'邮箱错误'/'用户名错误'  
 	}
+
+## 4.发帖：
+**api**:  url+toPost<br>
+**param**: content(评论的内容),label(吐槽的标签）<br>
+**return**:<br>
+{<br>
+**'isOk'**:true<br>
+**'errmsg'**:'未知错误'<br>
+}
+
+## 5.贴吧广场：（查看所有帖子）
+**method**： GET
+**api**: url+Posts<br>
+**return**:<br>
+{<br>
+**'isOk'**:true<br>
+**'errmsg'**:'未知错误'<br>
+**'Posts'**: {'name':'','category':'','date':'','like':'','dislike':'','content':'','user_id':'','pk':''}<br>
+}<br>
+
+**注：**：posts为所有帖子的集合，每一个帖子包含以下信息：name为发帖人昵称，匿名则返回‘匿名’，category为帖子标签，like为点赞数，dislike为不喜欢数，content为内容,user_id为发帖人在数据库中的id，pk为该帖子在数据库中的id。
+
+## 6.帖子信息：（查看单个帖子信息）
+**api**：url+PostInfo<br>
+**param**:pk<br>
+**return**:<br>
+{<br>
+**'isOk'**:true<br>
+**'errmsg'**:'未知错误'<br>
+**'name'**:''<br>
+**'category'**:''<br>
+**'date'**:''<br>
+**'like'**:''<br>
+**'dislike'**:''<br>
+**'content'**:''<br>
+**'comments'**:{'name':,'content':''}<br>
+}
+
+## 7.发表评论
+**api**：url+comment<br>
+**param**:pk,comment,isAnonymity<br>
+**return**:<br>
+{<br>
+**'isOk'**:true<br>
+**'errmsg'**:'未知错误'<br>
+}
+
+
+
+
