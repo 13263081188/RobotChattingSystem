@@ -1,7 +1,5 @@
 <h1> 本文件为RobotChattingSystem前后端交互所需API</h1>
 <h3>默认为post方法</h3>
-<h1> 本文件为RobotChattingSystem前后端交互所需API</h1>
-<h3>默认为post方法</h3>
 ## 1.邮箱验证：
 **api**:	url+emailCheck<br>
 **param**:email<br>
